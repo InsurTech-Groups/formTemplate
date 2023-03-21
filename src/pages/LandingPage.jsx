@@ -9,6 +9,10 @@ import { trustedForm } from "../apis/trustedForm";
 import GetMoreQuotes from "../components/GetMoreQuotes";
 function LandingPage() {
   
+  // TODO: Add Specific Form Type
+  // TODO: Add Specific Form Header
+
+  let formType = ""
 
   useEffect(() => {
     ipAddress();
@@ -18,7 +22,7 @@ function LandingPage() {
 
   const features = [
     {
-      name: 'Competitive Commerical Rates',
+      name: `Competitive ${formType} Rates`,
       description:
         'We shop with over 20 of our partnered carriers to bring you the most competitive and best price tailored just for you.',
       icon: GlobeAltIcon,
@@ -45,12 +49,12 @@ function LandingPage() {
             <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
               <span className="block xl:inline">Get Your Free</span> <br />
               <span className="block font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
-                Commercial Insurance {' '}
+                {formType} {' '}
               </span>
               Quote
             </h1>
             <p className="mx-auto mt-3 max-w-md text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">
-              Fill out a form in less than 3 minutes, and talk to an agent to get a quote tailored for you at a competitive price. Shopping for commercial insurance has never been easier.
+              Fill out a form in less than 3 minutes, and talk to an agent to get a quote tailored for you at a competitive price. Shopping for {formType} has never been easier.
             </p>
               <ZipCode />
           </div>
